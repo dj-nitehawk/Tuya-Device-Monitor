@@ -9,6 +9,8 @@ public partial class Main : Form
     private readonly Device ac = new("192.168.1.24", "88a31d7051f7799a", "bf46713b278690de85auaz") { PermanentConnection = true };
     private readonly Device house = new("192.168.1.25", "a26f8adb63258f9e", "63530822d8bfc0134df1") { PermanentConnection = true };
 
+    private const double threshold = 50;
+
     public Main() => InitializeComponent();
 
     private async void Main_Load(object sender, EventArgs e)
@@ -31,16 +33,22 @@ public partial class Main : Form
     {
         double diff = house.Watts - grid.Watts;
 
-        if (diff < -50)
+        if (diff < -threshold)
         {
             Free_Value.Text = diff.ToString();
             Free_Value.ForeColor = Color.DarkRed;
             Free.Text = "Charging Batt";
         }
-        else if (diff > 50)
+        else if (diff > threshold)
         {
             Free_Value.Text = diff.ToString();
             Free_Value.ForeColor = Color.DarkGreen;
+            Free.Text = "From PV/Batt";
+        }
+        else
+        {
+            Free_Value.Text = "0";
+            Free_Value.ForeColor = Color.DarkRed;
             Free.Text = "From PV/Batt";
         }
     }
