@@ -1,4 +1,5 @@
 ﻿using com.clusterrr.TuyaNet;
+using System.Net.Sockets;
 
 namespace SakoMonitor;
 
@@ -6,6 +7,8 @@ internal class Device : TuyaDevice
 {
     public double Watts { get; set; }
     public double Voltage { get; set; }
+
+    private DateTime tryAgainAt;
 
     public Device(
         string ip,
@@ -18,6 +21,11 @@ internal class Device : TuyaDevice
 
     public async Task UpdateLabels(Label watts)
     {
+        if (DateTime.Now < tryAgainAt)
+        {
+            return;
+        }
+
         await ReadStatus();
         watts.Text = Watts.ToString();
     }
@@ -26,17 +34,26 @@ internal class Device : TuyaDevice
     {
         try
         {
-            var dps = await GetDpsAsync();
+            Dictionary<int, object>? dps = await GetDpsAsync();
 
             if (dps.ContainsKey(DP.Watts))
+            {
                 Watts = Math.Round(Convert.ToDouble(dps[DP.Watts]) / 10, 0);
+            }
 
             if (dps.ContainsKey(DP.Voltage))
+            {
                 Voltage = Math.Round(Convert.ToDouble(dps[DP.Voltage]) / 10, 0);
+            }
         }
-        catch
+        catch (SocketException ex)
         {
-            return;
+            if (ex.SocketErrorCode == SocketError.TimedOut)
+            {
+                tryAgainAt = DateTime.Now.AddSeconds(45);
+                Watts = 0;
+                Voltage = 0;
+            }
         }
     }
 }
