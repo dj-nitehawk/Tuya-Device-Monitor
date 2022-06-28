@@ -7,6 +7,8 @@ internal class Device : TuyaDevice
 {
     public double Watts { get; set; }
     public double Voltage { get; set; }
+    public Label LabelToUpdate { get; set; }
+    public bool Enabled { get; set; } = true;
 
     private DateTime tryAgainAt;
 
@@ -17,20 +19,20 @@ internal class Device : TuyaDevice
         TuyaProtocolVersion protocolVersion = TuyaProtocolVersion.V33,
         int port = 6668,
         int receiveTimeout = 250
-        ) : base(ip, localKey, deviceId, protocolVersion, port, receiveTimeout) { }
-
-    public async Task UpdateLabels(Label watts)
+        ) : base(ip, localKey, deviceId, protocolVersion, port, receiveTimeout)
     {
-        if (DateTime.Now < tryAgainAt)
+        _ = Task.Run(async () =>
         {
-            return;
-        }
-
-        await ReadStatus();
-        watts.Text = Watts.ToString();
+            while (true)
+            {
+                await Task.Delay(1500);
+                if (Enabled && DateTime.Now > tryAgainAt)
+                    await Update();
+            }
+        });
     }
 
-    private async Task ReadStatus()
+    private async Task Update()
     {
         try
         {
@@ -39,6 +41,7 @@ internal class Device : TuyaDevice
             if (dps.ContainsKey(DP.Watts))
             {
                 Watts = Math.Round(Convert.ToDouble(dps[DP.Watts]) / 10, 0);
+                LabelToUpdate.Text = Watts.ToString();
             }
 
             if (dps.ContainsKey(DP.Voltage))
