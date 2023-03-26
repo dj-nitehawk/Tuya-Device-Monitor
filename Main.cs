@@ -5,7 +5,7 @@ public partial class Main : Form
     //see here for the proceedure to obtain the local-keys of your devices
     //https://github.com/ClusterM/tuyanet#how-to-obtain-local-key
 
-    private readonly Device grid = new("192.168.1.23", "0579bb27e3c60cdc", "83330616a4e57c13e21c") { PermanentConnection = true };
+    private readonly Device grid = new("192.168.1.23", "692dab0ca5da5082", "bfacd5992b46f177235vz5") { PermanentConnection = true };
     private readonly Device ac = new("192.168.1.24", "88a31d7051f7799a", "bf46713b278690de85auaz") { PermanentConnection = true };
     private readonly Device house = new("192.168.1.25", "a26f8adb63258f9e", "63530822d8bfc0134df1") { PermanentConnection = true };
 
