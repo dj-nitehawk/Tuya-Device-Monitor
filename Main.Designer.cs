@@ -28,222 +28,180 @@ partial class Main
     /// </summary>
     private void InitializeComponent()
     {
-        this.Group1 = new System.Windows.Forms.GroupBox();
-        this.label1 = new System.Windows.Forms.Label();
-        this.Grid_Value = new System.Windows.Forms.Label();
-        this.groupBox1 = new System.Windows.Forms.GroupBox();
-        this.label4 = new System.Windows.Forms.Label();
-        this.House_Value = new System.Windows.Forms.Label();
-        this.groupBox2 = new System.Windows.Forms.GroupBox();
-        this.label6 = new System.Windows.Forms.Label();
-        this.AC_Value = new System.Windows.Forms.Label();
-        this.Free = new System.Windows.Forms.GroupBox();
-        this.label10 = new System.Windows.Forms.Label();
-        this.Free_Value = new System.Windows.Forms.Label();
-        this.Voltage_Value = new System.Windows.Forms.Label();
-        this.label2 = new System.Windows.Forms.Label();
-        this.Group1.SuspendLayout();
-        this.groupBox1.SuspendLayout();
-        this.groupBox2.SuspendLayout();
-        this.Free.SuspendLayout();
-        this.SuspendLayout();
+        Group1 = new GroupBox();
+        label1 = new Label();
+        Grid_Value = new Label();
+        groupBox1 = new GroupBox();
+        label4 = new Label();
+        House_Value = new Label();
+        label2 = new Label();
+        Voltage_Value = new Label();
+        groupBox2 = new GroupBox();
+        label6 = new Label();
+        AC_Value = new Label();
+        Group1.SuspendLayout();
+        groupBox1.SuspendLayout();
+        groupBox2.SuspendLayout();
+        SuspendLayout();
         // 
         // Group1
         // 
-        this.Group1.BackColor = System.Drawing.Color.Gainsboro;
-        this.Group1.Controls.Add(this.label1);
-        this.Group1.Controls.Add(this.Grid_Value);
-        this.Group1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.Group1.ForeColor = System.Drawing.Color.DarkBlue;
-        this.Group1.Location = new System.Drawing.Point(0, 0);
-        this.Group1.Name = "Group1";
-        this.Group1.Size = new System.Drawing.Size(132, 79);
-        this.Group1.TabIndex = 0;
-        this.Group1.TabStop = false;
-        this.Group1.Text = "Grid Supply";
+        Group1.BackColor = Color.Gainsboro;
+        Group1.Controls.Add(label1);
+        Group1.Controls.Add(Grid_Value);
+        Group1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+        Group1.ForeColor = Color.DarkBlue;
+        Group1.Location = new Point(1, 1);
+        Group1.Name = "Group1";
+        Group1.Size = new Size(258, 31);
+        Group1.TabIndex = 0;
+        Group1.TabStop = false;
+        Group1.Text = "Grid Supply";
         // 
         // label1
         // 
-        this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.label1.ForeColor = System.Drawing.Color.DimGray;
-        this.label1.Location = new System.Drawing.Point(57, 52);
-        this.label1.Name = "label1";
-        this.label1.Size = new System.Drawing.Size(20, 26);
-        this.label1.TabIndex = 2;
-        this.label1.Text = "W";
-        this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        label1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+        label1.ForeColor = Color.DimGray;
+        label1.Location = new Point(181, 1);
+        label1.Name = "label1";
+        label1.Size = new Size(20, 26);
+        label1.TabIndex = 2;
+        label1.Text = "W";
+        label1.TextAlign = ContentAlignment.MiddleCenter;
         // 
         // Grid_Value
         // 
-        this.Grid_Value.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.Grid_Value.ForeColor = System.Drawing.Color.DarkRed;
-        this.Grid_Value.Location = new System.Drawing.Point(33, 24);
-        this.Grid_Value.Name = "Grid_Value";
-        this.Grid_Value.Size = new System.Drawing.Size(70, 35);
-        this.Grid_Value.TabIndex = 0;
-        this.Grid_Value.Text = "0000";
-        this.Grid_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        Grid_Value.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+        Grid_Value.ForeColor = Color.DarkRed;
+        Grid_Value.Location = new Point(129, -3);
+        Grid_Value.Name = "Grid_Value";
+        Grid_Value.Size = new Size(57, 35);
+        Grid_Value.TabIndex = 0;
+        Grid_Value.Text = "000";
+        Grid_Value.TextAlign = ContentAlignment.MiddleRight;
         // 
         // groupBox1
         // 
-        this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
-        this.groupBox1.Controls.Add(this.label4);
-        this.groupBox1.Controls.Add(this.House_Value);
-        this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.groupBox1.ForeColor = System.Drawing.Color.DarkBlue;
-        this.groupBox1.Location = new System.Drawing.Point(0, 110);
-        this.groupBox1.Name = "groupBox1";
-        this.groupBox1.Size = new System.Drawing.Size(132, 75);
-        this.groupBox1.TabIndex = 1;
-        this.groupBox1.TabStop = false;
-        this.groupBox1.Text = "House Load";
+        groupBox1.BackColor = Color.Gainsboro;
+        groupBox1.Controls.Add(label4);
+        groupBox1.Controls.Add(House_Value);
+        groupBox1.Controls.Add(label2);
+        groupBox1.Controls.Add(Voltage_Value);
+        groupBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+        groupBox1.ForeColor = Color.DarkBlue;
+        groupBox1.Location = new Point(1, 33);
+        groupBox1.Name = "groupBox1";
+        groupBox1.Size = new Size(258, 33);
+        groupBox1.TabIndex = 1;
+        groupBox1.TabStop = false;
+        groupBox1.Text = "House Load";
         // 
         // label4
         // 
-        this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.label4.ForeColor = System.Drawing.Color.DimGray;
-        this.label4.Location = new System.Drawing.Point(55, 51);
-        this.label4.Name = "label4";
-        this.label4.Size = new System.Drawing.Size(20, 26);
-        this.label4.TabIndex = 2;
-        this.label4.Text = "W";
-        this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+        label4.ForeColor = Color.DimGray;
+        label4.Location = new Point(181, 1);
+        label4.Name = "label4";
+        label4.Size = new Size(20, 26);
+        label4.TabIndex = 2;
+        label4.Text = "W";
+        label4.TextAlign = ContentAlignment.MiddleCenter;
         // 
         // House_Value
         // 
-        this.House_Value.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.House_Value.ForeColor = System.Drawing.Color.DarkRed;
-        this.House_Value.Location = new System.Drawing.Point(30, 23);
-        this.House_Value.Name = "House_Value";
-        this.House_Value.Size = new System.Drawing.Size(70, 35);
-        this.House_Value.TabIndex = 0;
-        this.House_Value.Text = "0000";
-        this.House_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // groupBox2
-        // 
-        this.groupBox2.BackColor = System.Drawing.Color.Gainsboro;
-        this.groupBox2.Controls.Add(this.label6);
-        this.groupBox2.Controls.Add(this.AC_Value);
-        this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.groupBox2.ForeColor = System.Drawing.Color.DarkBlue;
-        this.groupBox2.Location = new System.Drawing.Point(153, 0);
-        this.groupBox2.Name = "groupBox2";
-        this.groupBox2.Size = new System.Drawing.Size(170, 79);
-        this.groupBox2.TabIndex = 2;
-        this.groupBox2.TabStop = false;
-        this.groupBox2.Text = "Air Conditioner";
-        // 
-        // label6
-        // 
-        this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.label6.ForeColor = System.Drawing.Color.DimGray;
-        this.label6.Location = new System.Drawing.Point(74, 53);
-        this.label6.Name = "label6";
-        this.label6.Size = new System.Drawing.Size(20, 26);
-        this.label6.TabIndex = 2;
-        this.label6.Text = "W";
-        this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // AC_Value
-        // 
-        this.AC_Value.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.AC_Value.ForeColor = System.Drawing.Color.DarkRed;
-        this.AC_Value.Location = new System.Drawing.Point(47, 25);
-        this.AC_Value.Name = "AC_Value";
-        this.AC_Value.Size = new System.Drawing.Size(72, 35);
-        this.AC_Value.TabIndex = 0;
-        this.AC_Value.Text = "0000";
-        this.AC_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // Free
-        // 
-        this.Free.BackColor = System.Drawing.Color.Gainsboro;
-        this.Free.Controls.Add(this.label10);
-        this.Free.Controls.Add(this.Free_Value);
-        this.Free.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.Free.ForeColor = System.Drawing.Color.DarkBlue;
-        this.Free.Location = new System.Drawing.Point(153, 110);
-        this.Free.Name = "Free";
-        this.Free.Size = new System.Drawing.Size(170, 75);
-        this.Free.TabIndex = 3;
-        this.Free.TabStop = false;
-        this.Free.Text = "From PV/Batt";
-        // 
-        // label10
-        // 
-        this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.label10.ForeColor = System.Drawing.Color.DimGray;
-        this.label10.Location = new System.Drawing.Point(72, 52);
-        this.label10.Name = "label10";
-        this.label10.Size = new System.Drawing.Size(20, 26);
-        this.label10.TabIndex = 2;
-        this.label10.Text = "W";
-        this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // Free_Value
-        // 
-        this.Free_Value.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.Free_Value.ForeColor = System.Drawing.Color.DarkRed;
-        this.Free_Value.Location = new System.Drawing.Point(47, 24);
-        this.Free_Value.Name = "Free_Value";
-        this.Free_Value.Size = new System.Drawing.Size(71, 35);
-        this.Free_Value.TabIndex = 0;
-        this.Free_Value.Text = "0000";
-        this.Free_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // Voltage_Value
-        // 
-        this.Voltage_Value.BackColor = System.Drawing.Color.Transparent;
-        this.Voltage_Value.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.Voltage_Value.ForeColor = System.Drawing.Color.DimGray;
-        this.Voltage_Value.Location = new System.Drawing.Point(117, 77);
-        this.Voltage_Value.Margin = new System.Windows.Forms.Padding(1);
-        this.Voltage_Value.Name = "Voltage_Value";
-        this.Voltage_Value.Size = new System.Drawing.Size(56, 27);
-        this.Voltage_Value.TabIndex = 4;
-        this.Voltage_Value.Text = "000";
-        this.Voltage_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        House_Value.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+        House_Value.ForeColor = Color.DarkRed;
+        House_Value.Location = new Point(116, -4);
+        House_Value.Name = "House_Value";
+        House_Value.Size = new Size(70, 35);
+        House_Value.TabIndex = 0;
+        House_Value.Text = "0000";
+        House_Value.TextAlign = ContentAlignment.MiddleRight;
         // 
         // label2
         // 
-        this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-        this.label2.ForeColor = System.Drawing.Color.Gray;
-        this.label2.Location = new System.Drawing.Point(164, 77);
-        this.label2.Name = "label2";
-        this.label2.Size = new System.Drawing.Size(20, 26);
-        this.label2.TabIndex = 3;
-        this.label2.Text = "V";
-        this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+        label2.ForeColor = Color.Gray;
+        label2.Location = new Point(237, 7);
+        label2.Name = "label2";
+        label2.Size = new Size(20, 15);
+        label2.TabIndex = 3;
+        label2.Text = "V";
+        label2.TextAlign = ContentAlignment.MiddleCenter;
+        label2.Click += label2_Click;
+        // 
+        // Voltage_Value
+        // 
+        Voltage_Value.BackColor = Color.Transparent;
+        Voltage_Value.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+        Voltage_Value.ForeColor = Color.DimGray;
+        Voltage_Value.Location = new Point(199, 3);
+        Voltage_Value.Margin = new Padding(1);
+        Voltage_Value.Name = "Voltage_Value";
+        Voltage_Value.Size = new Size(44, 23);
+        Voltage_Value.TabIndex = 4;
+        Voltage_Value.Text = "000";
+        Voltage_Value.TextAlign = ContentAlignment.MiddleRight;
+        // 
+        // groupBox2
+        // 
+        groupBox2.BackColor = Color.Gainsboro;
+        groupBox2.Controls.Add(label6);
+        groupBox2.Controls.Add(AC_Value);
+        groupBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+        groupBox2.ForeColor = Color.DarkBlue;
+        groupBox2.Location = new Point(1, 67);
+        groupBox2.Name = "groupBox2";
+        groupBox2.Size = new Size(258, 31);
+        groupBox2.TabIndex = 2;
+        groupBox2.TabStop = false;
+        groupBox2.Text = "My AirCon";
+        // 
+        // label6
+        // 
+        label6.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+        label6.ForeColor = Color.DimGray;
+        label6.Location = new Point(181, 0);
+        label6.Name = "label6";
+        label6.Size = new Size(20, 26);
+        label6.TabIndex = 2;
+        label6.Text = "W";
+        label6.TextAlign = ContentAlignment.MiddleCenter;
+        // 
+        // AC_Value
+        // 
+        AC_Value.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+        AC_Value.ForeColor = Color.DarkRed;
+        AC_Value.Location = new Point(115, -4);
+        AC_Value.Name = "AC_Value";
+        AC_Value.Size = new Size(72, 35);
+        AC_Value.TabIndex = 0;
+        AC_Value.Text = "0000";
+        AC_Value.TextAlign = ContentAlignment.MiddleRight;
         // 
         // Main
         // 
-        this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(325, 187);
-        this.Controls.Add(this.groupBox2);
-        this.Controls.Add(this.Group1);
-        this.Controls.Add(this.label2);
-        this.Controls.Add(this.Voltage_Value);
-        this.Controls.Add(this.Free);
-        this.Controls.Add(this.groupBox1);
-        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-        this.MaximizeBox = false;
-        this.Name = "Main";
-        this.ShowIcon = false;
-        this.ShowInTaskbar = false;
-        this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-        this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-        this.Text = "Tuya Power Monitor";
-        this.TopMost = true;
-        this.Load += new System.EventHandler(this.Main_Load);
-        this.Resize += new System.EventHandler(this.Main_Resize);
-        this.Group1.ResumeLayout(false);
-        this.groupBox1.ResumeLayout(false);
-        this.groupBox2.ResumeLayout(false);
-        this.Free.ResumeLayout(false);
-        this.ResumeLayout(false);
-
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(260, 99);
+        Controls.Add(groupBox2);
+        Controls.Add(Group1);
+        Controls.Add(groupBox1);
+        FormBorderStyle = FormBorderStyle.FixedSingle;
+        MaximizeBox = false;
+        Name = "Main";
+        ShowIcon = false;
+        ShowInTaskbar = false;
+        SizeGripStyle = SizeGripStyle.Hide;
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "Tuya Power Monitor";
+        TopMost = true;
+        Load += Main_Load;
+        Resize += Main_Resize;
+        Group1.ResumeLayout(false);
+        groupBox1.ResumeLayout(false);
+        groupBox2.ResumeLayout(false);
+        ResumeLayout(false);
     }
 
     #endregion
@@ -257,9 +215,6 @@ partial class Main
     private GroupBox groupBox2;
     private Label label6;
     private Label AC_Value;
-    private GroupBox Free;
-    private Label label10;
-    private Label Free_Value;
     private Label Voltage_Value;
     private Label label2;
 }

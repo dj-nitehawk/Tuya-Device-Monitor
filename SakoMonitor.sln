@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SakoMonitor", "SakoMonitor.csproj", "{BC922A41-E7A2-4B0E-A816-949B2C08745A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuyaDeviceMonitor", "TuyaDeviceMonitor.csproj", "{BC922A41-E7A2-4B0E-A816-949B2C08745A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
