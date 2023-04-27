@@ -128,7 +128,6 @@ partial class Main
         label2.TabIndex = 3;
         label2.Text = "V";
         label2.TextAlign = ContentAlignment.MiddleCenter;
-        label2.Click += label2_Click;
         // 
         // Voltage_Value
         // 

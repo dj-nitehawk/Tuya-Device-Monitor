@@ -23,9 +23,10 @@ internal class Device : TuyaDevice
         {
             while (true)
             {
-                await Task.Delay(1500);
                 if (Enabled && DateTime.Now > tryAgainAt)
                     await Update();
+
+                await Task.Delay(2000);
             }
         });
     }
@@ -51,7 +52,7 @@ internal class Device : TuyaDevice
         {
             if (ex.SocketErrorCode == SocketError.TimedOut)
             {
-                tryAgainAt = DateTime.Now.AddSeconds(45);
+                tryAgainAt = DateTime.Now.AddSeconds(30);
                 Watts = 0;
                 Voltage = 0;
             }

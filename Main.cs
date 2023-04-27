@@ -24,7 +24,7 @@ public partial class Main : Form
             while (true)
             {
                 Voltage_Value.Text = house.Voltage.ToString();
-                await Task.Delay(1500);
+                await Task.Delay(2000);
             }
         });
     }
@@ -34,10 +34,5 @@ public partial class Main : Form
         ac.Enabled = !ac.Enabled;
         grid.Enabled = !grid.Enabled;
         house.Enabled = !house.Enabled;
-    }
-
-    private void label2_Click(object sender, EventArgs e)
-    {
-
     }
 }
